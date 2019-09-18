@@ -104,144 +104,144 @@ public class GildedRoseTest {
   }
 
   // /* Sulfuras Tests */
-  // @Test
-  // public void updatesSulfurasBeforeSellDate() {
-  //   GildedRose rose = new GildedRose("Sulfuras, Hand of Ragnaros", 5, 80);
-  //   rose.tick();
+  @Test
+  public void updatesSulfurasBeforeSellDate() {
+    GildedRose rose = new GildedRose("Sulfuras, Hand of Ragnaros", 5, 80);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), 5);
-  //   assertEquals(rose.getQuality(), 80);
-  // }
+    assertEquals(rose.getDaysRemaining(), 5);
+    assertEquals(rose.getQuality(), 80);
+  }
 
-  // @Test
-  // public void updatesSulfurasOnSellDate() {
-  //   GildedRose rose = new GildedRose("Sulfuras, Hand of Ragnaros", 0, 80);
-  //   rose.tick();
+  @Test
+  public void updatesSulfurasOnSellDate() {
+    GildedRose rose = new GildedRose("Sulfuras, Hand of Ragnaros", 0, 80);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), 0);
-  //   assertEquals(rose.getQuality(), 80);
-  // }
+    assertEquals(rose.getDaysRemaining(), 0);
+    assertEquals(rose.getQuality(), 80);
+  }
 
-  // @Test
-  // public void updatesSulfurasAfterSellDate() {
-  //   GildedRose rose = new GildedRose("Sulfuras, Hand of Ragnaros", -10, 80);
-  //   rose.tick();
+  @Test
+  public void updatesSulfurasAfterSellDate() {
+    GildedRose rose = new GildedRose("Sulfuras, Hand of Ragnaros", -10, 80);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), -10);
-  //   assertEquals(rose.getQuality(), 80);
-  // }
+    assertEquals(rose.getDaysRemaining(), -10);
+    assertEquals(rose.getQuality(), 80);
+  }
 
   // /* Backstage Pass Tests */
-  // @Test
-  // public void updatesBackstagePassLongBeforeSellDate() {
-  //   GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 11, 10);
-  //   rose.tick();
+  @Test
+  public void updatesBackstagePassLongBeforeSellDate() {
+    GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 11, 10);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), 10);
-  //   assertEquals(rose.getQuality(), 11);
-  // }
+    assertEquals(rose.getDaysRemaining(), 10);
+    assertEquals(rose.getQuality(), 11);
+  }
 
-  // @Test
-  // public void updatesBackstagePassLongBeforeSellDateAtMaxQuality() {
-  //   GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 11, 50);
-  //   rose.tick();
+  @Test
+  public void updatesBackstagePassLongBeforeSellDateAtMaxQuality() {
+    GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 11, 50);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), 10);
-  //   assertEquals(rose.getQuality(), 50);
-  // }
+    assertEquals(rose.getDaysRemaining(), 10);
+    assertEquals(rose.getQuality(), 50);
+  }
 
-  // @Test
-  // public void updatesBackstagePassMediumCloseToSellDateUpperBound() {
-  //   GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 10, 10);
-  //   rose.tick();
+  @Test
+  public void updatesBackstagePassMediumCloseToSellDateUpperBound() {
+    GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 10, 10);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), 9);
-  //   assertEquals(rose.getQuality(), 12);
-  // }
+    assertEquals(rose.getDaysRemaining(), 9);
+    assertEquals(rose.getQuality(), 12);
+  }
 
-  // @Test
-  // public void updatesBackstagePassMediumCloseToSellDateUpperBoundAtMaxQuality() {
-  //   GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 10, 50);
-  //   rose.tick();
+  @Test
+  public void updatesBackstagePassMediumCloseToSellDateUpperBoundAtMaxQuality() {
+    GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 10, 50);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), 9);
-  //   assertEquals(rose.getQuality(), 50);
-  // }
+    assertEquals(rose.getDaysRemaining(), 9);
+    assertEquals(rose.getQuality(), 50);
+  }
 
-  // @Test
-  // public void updatesBackstagePassMediumCloseToSellDateLowerBound() {
-  //   GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 6, 10);
-  //   rose.tick();
+  @Test
+  public void updatesBackstagePassMediumCloseToSellDateLowerBound() {
+    GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 6, 10);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), 5);
-  //   assertEquals(rose.getQuality(), 12);
-  // }
+    assertEquals(rose.getDaysRemaining(), 5);
+    assertEquals(rose.getQuality(), 12);
+  }
 
-  // @Test
-  // public void updatesBackstagePassMediumCloseToSellDateLowerBoundAtMaxQuality() {
-  //   GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 6, 50);
-  //   rose.tick();
+  @Test
+  public void updatesBackstagePassMediumCloseToSellDateLowerBoundAtMaxQuality() {
+    GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 6, 50);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), 5);
-  //   assertEquals(rose.getQuality(), 50);
-  // }
+    assertEquals(rose.getDaysRemaining(), 5);
+    assertEquals(rose.getQuality(), 50);
+  }
 
-  // @Test
-  // public void updatesBackstagePassVeryCloseToSellDateUpperBound() {
-  //   GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 5, 10);
-  //   rose.tick();
+  @Test
+  public void updatesBackstagePassVeryCloseToSellDateUpperBound() {
+    GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 5, 10);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), 4);
-  //   assertEquals(rose.getQuality(), 13);
-  // }
+    assertEquals(rose.getDaysRemaining(), 4);
+    assertEquals(rose.getQuality(), 13);
+  }
 
-  // @Test
-  // public void updatesBackstagePassVeryCloseToSellDateUpperBoundAtMaxQuality() {
-  //   GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 5, 50);
-  //   rose.tick();
+  @Test
+  public void updatesBackstagePassVeryCloseToSellDateUpperBoundAtMaxQuality() {
+    GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 5, 50);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), 4);
-  //   assertEquals(rose.getQuality(), 50);
-  // }
+    assertEquals(rose.getDaysRemaining(), 4);
+    assertEquals(rose.getQuality(), 50);
+  }
 
-  // @Test
-  // public void updatesBackstagePassVeryCloseToSellDateLowerBound() {
-  //   GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 1, 10);
-  //   rose.tick();
+  @Test
+  public void updatesBackstagePassVeryCloseToSellDateLowerBound() {
+    GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 1, 10);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), 0);
-  //   assertEquals(rose.getQuality(), 13);
-  // }
+    assertEquals(rose.getDaysRemaining(), 0);
+    assertEquals(rose.getQuality(), 13);
+  }
 
-  // @Test
-  // public void updatesBackstagePassVeryCloseToSellDateLowerBoundAtMaxQuality() {
-  //   GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 1, 50);
-  //   rose.tick();
+  @Test
+  public void updatesBackstagePassVeryCloseToSellDateLowerBoundAtMaxQuality() {
+    GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 1, 50);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), 0);
-  //   assertEquals(rose.getQuality(), 50);
-  // }
+    assertEquals(rose.getDaysRemaining(), 0);
+    assertEquals(rose.getQuality(), 50);
+  }
 
-  // @Test
-  // public void updatesBackstagePassOnSellDate() {
-  //   GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 0, 10);
-  //   rose.tick();
+  @Test
+  public void updatesBackstagePassOnSellDate() {
+    GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 0, 10);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), -1);
-  //   assertEquals(rose.getQuality(), 0);
-  // }
+    assertEquals(rose.getDaysRemaining(), -1);
+    assertEquals(rose.getQuality(), 0);
+  }
 
-  // @Test
-  // public void updatesBackstagePassAfterSellDate() {
-  //   GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", -10, 10);
-  //   rose.tick();
+  @Test
+  public void updatesBackstagePassAfterSellDate() {
+    GildedRose rose = new GildedRose("Backstage passes to a TAFKAL80ETC concert", -10, 10);
+    rose.tick();
 
-  //   assertEquals(rose.getDaysRemaining(), -11);
-  //   assertEquals(rose.getQuality(), 0);
-  // }
+    assertEquals(rose.getDaysRemaining(), -11);
+    assertEquals(rose.getQuality(), 0);
+  }
 
   /* Conjured Mana */
-  /* Our job is to add this functionality!!
+  /* Our job is to add this functionality!! */
   @Test
   public void updatesConjuredManaBeforeSellDate() {
     GildedRose rose = new GildedRose("Conjured Mana Cake", 5, 10);
@@ -295,5 +295,4 @@ public class GildedRoseTest {
     assertEquals(rose.getDaysRemaining(), -11);
     assertEquals(rose.getQuality(), 0);
   }
-  */
 }
